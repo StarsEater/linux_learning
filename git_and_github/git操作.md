@@ -40,5 +40,10 @@ git push origin dev: dev1 # 将本地分支dev推送到origin的dev1分支上
 git branch -u origin/dev dev #将本地分支dev与远程分支origin/dev关联，u是unset-upstream的缩写
 git branch --unser-upstream dev #撤销分支对远程分支的跟踪
 
+git push -u origin dev # 推送dev并跟踪远程分支
+
+git push origin :dev #删除远程分支dev
+git branch -D dev dev2 # 删除本地分支dev dev ,主要需要切换到其他分支
+git branch -m dev dev1 # 修改本地分支dev为dev1
 ```
 
