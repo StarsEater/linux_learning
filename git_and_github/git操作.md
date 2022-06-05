@@ -24,3 +24,21 @@ git reflog  # 查看版本
 git reset --head HEAD@{1} # 回退到特定版本
 ```
 
+
+
+### git 分支操作
+
+```shell
+git config --global alias.st status # 别名
+git fetch # 将远程仓库的分支信息拉取到本地，刷新本地分支
+git rebase origin/master # 本地分支基于远程仓库的master分支
+git branch dev # 创建分支dev
+git checkout dev #切换到分支
+git checkout -b dev # 创建分支并切换到新分支
+
+git push origin dev: dev1 # 将本地分支dev推送到origin的dev1分支上
+git branch -u origin/dev dev #将本地分支dev与远程分支origin/dev关联，u是unset-upstream的缩写
+git branch --unser-upstream dev #撤销分支对远程分支的跟踪
+
+```
+
