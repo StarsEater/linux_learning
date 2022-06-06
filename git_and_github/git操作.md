@@ -47,3 +47,20 @@ git branch -D dev dev2 # 删除本地分支dev dev ,主要需要切换到其他�
 git branch -m dev dev1 # 修改本地分支dev为dev1
 ```
 
+### git 多人协作
+
+```shell
+git commit -m 'fix #1 添加文件' # 完成1号issue
+# 提PR
+# create a merge commit: 在组长仓库的master分支上生成新的提交，且保留PR中的所有提交信息
+# squash and merge: 压缩合并，PR的提交全部提交压缩成一个
+# rebase and merge: 不会生成新的提交
+
+git pull --rebase = git fetch + git rebase # 同步主仓库
+
+git tag v1.0 -m '发布版本1.0' # v1.0标签并备注,，保存在.git/refs/tags
+git tag -d v1.0 # 删除tag v1.0
+git push origin v1.0 # 推送tag
+git push origin :refs/tags/v1.0
+```
+
